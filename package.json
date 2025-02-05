@@ -1,19 +1,37 @@
 {
   "name": "ts-migrator",
   "version": "1.0.0",
-  "description": "A Typescript sql migrator",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "A lightweight migration tool for PostgreSQL using TypeScript and postgres.js",
+  "main": "dist/cli.js",
+  "bin": {
+    "pg-migrate": "dist/cli.js"
   },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "dotenv": "^16.0.3",
+    "postgres": "^3.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.2.2"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/usmaarn/ts-migrator.git"
   },
   "keywords": [
-    "Migrator",
-    "SQL",
-    "MIgrator"
+    "migration",
+    "postgres",
+    "typescript",
+    "database"
   ],
   "author": "usmaarn",
   "license": "MIT",

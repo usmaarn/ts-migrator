@@ -1,0 +1,4 @@
+{
+  "databaseUrl": "postgres://user:password@localhost:5432/mydb",
+  "migrationDir": "./migrations"
+}
